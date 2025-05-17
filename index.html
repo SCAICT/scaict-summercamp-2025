@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCAICT 活動資訊</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <canvas id="starfield"></canvas>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SCAICT 2025 暑期營隊</h1>
+            <p>科技盛典・電資交鋒・星際集結</p>
+            <div id="flipdown" class="flipdown"></div>
+            <br/>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDqIptsDJGxF68PQZ7wYME32_Va7qxvfm_STNtZrc6FeCRlw/viewform"  class="cta-glow-button">🚀 立即報名</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="card-glass" id="info">
+            <h2>📌 活動資訊</h2>
+            <p>⏱️ <strong>時間：</strong> 7 / 5（六）~ 7 / 6（日）</p>
+            <p>📍 <strong>地點：</strong> 臺中市立臺中工業高級中等學校</p>
+            <p>💰 <strong>費用：</strong> 早鳥 200 / 正式 300</p>
+            <p>🏠 <strong>住宿：</strong> 無</p>
+            <p>📆 <strong>報名截止：</strong> 6 / 27（五）</p>
+            <p>💻 <strong>講師：</strong> chao28661、毛哥EM</p>
+        </div>
+
+        <div class="card-glass" id="teacher">
+            <h2>🎓 講師介紹</h2>
+            <div class="mentor-flex">
+                <div class="mentor-item" onclick="openModal(0)">
+                    <img src="assets/images/chao.jpg" alt="chao28661" />
+                    <h3>chao28661</h3>
+                </div>
+                <div class="mentor-item" onclick="openModal(1)">
+                    <img src="assets/images/mao.jpg" alt="毛哥EM" />
+                    <h3>毛哥EM</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="mentor-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modal-name"></h3>
+                <p id="modal-detail"></p>
+            </div>
+        </div>
+        <div class="card-glass" id="schedule">
+            <h2>🗓️ 活動流程</h2>
+            <ul>
+                <li>Day 1：報到、開場、課程、分組活動</li>
+                <li>Day 2：實作挑戰、成果發表、結業</li>
+            </ul>
+        </div>
+
+        <div class="card-glass" id="organizer">
+            <h2>🏫 主辦 & 協辦</h2>
+            <p><strong>主辦：</strong> 中部高中電資社團聯合會議</p>
+            <p><strong>協辦：</strong></p>
+            <ul>
+                <li>台中一中電腦資訊研習社</li>
+                <li>台中二中電腦研習社</li>
+                <li>台中女中電科讀書會</li>
+                <li>台中高工資訊科</li>
+                <li>文華高中電腦研習社</li>
+                <li>西苑高中未來工程創客社</li>
+                <li>台中大里高中資訊隊</li>
+                <li>台中嶺東高中資訊競程社</li>
+                <li>港明高中、嘉義高商、復興高中</li>
+                <li>南華大學、宜蘭高商、文興高中、西松高中</li>
+                <li>實驗教育中心</li>
+            </ul>
+        </div>
+
+        <div class="card-glass" id="rules">
+            <h2>📑 注意事項</h2>
+            <ul>
+                <li>請閱讀網站資訊與填寫家長同意書，送出表單即同意營隊須知。</li>
+                <li>信箱為報名通訊管道，後續通知皆以此為主。</li>
+                <li>營隊網站：<a href="#">點此前往</a></li>
+            </ul>
+        </div>
+
+        <div class="card-glass contact-card" id="contact" style="text-align: left;">
+            <h2>📞 聯絡資訊</h2>
+            <p>📱 <strong>總召：</strong> 林余安 0911608612</p>
+            <p>📱 <strong>副召：</strong> 紀翔文 0970053525、侯柏安 0908869660</p>
+            <p>📧 <strong>Email：</strong> scaict.official@gmail.com</p>
+            <p>📸 <strong>IG：</strong> <a href="https://www.instagram.com/scaict.tw/" target="_blank">@scaict.tw</a></p>
+            <p>🔗 <strong>Facebook：</strong> <a href="https://www.facebook.com/scaict.tw" target="_blank">粉專連結</a></p>
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>SCAICT 夏日營隊</h3>
+                <p>\由中部高中電資社團聯合會議主辦/<br>歡迎加入我們，開啟科技冒險之旅！</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>網站導覽</h4>
+                <ul>
+                    <li><a href="#info">活動資訊</a></li>
+                    <li><a href="#teacher">講師介紹</a></li>
+                    <li><a href="#organizer">主辦單位</a></li>
+                    <li><a href="#rules">注意事項</a></li>
+                    <li><a href="#contact">聯絡方式</a></li>
+                    <li><a href="#schedule">活動流程</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>聯絡我們</h4>
+                <p>
+                    📸 <a href="https://www.instagram.com/scaict.tw/" target="_blank">Instagram</a><br />
+                    🔗 <a href="https://www.facebook.com/scaict.tw" target="_blank">Facebook</a><br />
+                    🖥️ <a href="https://scaict.org/" target="_blank">中電官網</a><br />
+                    📧 <a href="mailto:scaict.official@gmail.com">scaict.official@gmail.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 SCAICT 夏日營隊｜Designed by SCAICT Team</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
