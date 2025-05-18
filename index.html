@@ -19,8 +19,9 @@
             <h1>SCAICT 2025 暑期營隊</h1>
             <p>科技盛典・電資交鋒・星際集結</p>
             <div id="flipdown" class="flipdown"></div>
-            <br/>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDqIptsDJGxF68PQZ7wYME32_Va7qxvfm_STNtZrc6FeCRlw/viewform"  class="cta-glow-button">🚀 立即報名</a>
+            <br />
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeDqIptsDJGxF68PQZ7wYME32_Va7qxvfm_STNtZrc6FeCRlw/viewform"
+                class="cta-glow-button">🚀 立即報名</a>
         </div>
     </section>
 
@@ -39,29 +40,83 @@
             <h2>🎓 講師介紹</h2>
             <div class="mentor-flex">
                 <div class="mentor-item" onclick="openModal(0)">
-                    <img src="assets/images/chao.jpg" alt="chao28661" />
+                    <img src="assets/images/chao.png" alt="chao28661" />
                     <h3>chao28661</h3>
                 </div>
                 <div class="mentor-item" onclick="openModal(1)">
-                    <img src="assets/images/mao.jpg" alt="毛哥EM" />
+                    <img src="assets/images/EM.webp" alt="毛哥EM" />
                     <h3>毛哥EM</h3>
                 </div>
             </div>
         </div>
 
-        <!-- Modal -->
+
         <div id="mentor-modal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modal-img" src="" alt="講師照片" class="modal-avatar" />
                 <h3 id="modal-name"></h3>
                 <p id="modal-detail"></p>
+                <p id="modal-link" class="mentor-link"></p>
             </div>
         </div>
-        <div class="card-glass" id="schedule">
-            <h2>🗓️ 活動流程</h2>
-            <ul>
-                <li>Day 1：報到、開場、課程、分組活動</li>
-                <li>Day 2：實作挑戰、成果發表、結業</li>
+
+        <div class="card-glass neon-schedule" id="schedule">
+            <h2>🗓️ 活動流程</h2>
+
+            <!-- Tabs -->
+            <div class="day-tabs">
+                <button class="tab active" data-day="day1">7 / 5（六）</button>
+                <button class="tab" data-day="day2">7 / 6（日）</button>
+            </div>
+
+            <!-- === Day 1 時程 === -->
+            <div class="timeline-wrapper show" id="day1">
+                <ul class="timeline">
+                    <li><span class="hex"></span><span class="content">09:00‑10:00｜報到</span></li>
+                    <li><span class="hex"></span><span class="content">10:00‑10:50｜開幕 + 破冰</span></li>
+                    <li><span class="hex"></span><span class="content">10:50‑11:00｜休息</span></li>
+                    <li><span class="hex"></span><span class="content">11:00‑12:00｜課程</span></li>
+                    <li><span class="hex"></span><span class="content">12:00‑13:00｜午餐</span></li>
+                    <li><span class="hex"></span><span class="content">13:00‑13:30｜介紹中電</span></li>
+                    <li><span class="hex"></span><span class="content">13:30‑17:00｜課程 + 休息</span></li>
+                </ul>
+            </div>
+
+            <!-- === Day 2 時程 === -->
+            <div class="timeline-wrapper" id="day2">
+                <ul class="timeline">
+                    <li><span class="hex"></span><span class="content">09:00‑10:00｜報到</span></li>
+                    <li><span class="hex"></span><span class="content">10:00‑12:00｜課程 + 休息</span></li>
+                    <li><span class="hex"></span><span class="content">12:00‑13:00｜午餐</span></li>
+                    <li><span class="hex"></span><span class="content">13:00‑16:00｜課程 + 休息</span></li>
+                    <li><span class="hex"></span><span class="content">16:00‑17:00｜大地遊戲</span></li>
+                    <li><span class="hex"></span><span class="content">17:00‑17:30｜閉幕 + 合照</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card-glass" id="course-schedule">
+            <h2>📚 課程資訊</h2>
+
+            <!-- Day 1 -->
+            <h3 class="day-title">🟠 Day 1 – 講師：chao28661</h3>
+            <ul class="course-list">
+                <li><span class="time">11:00~11:30</span> Basic knowledge</li>
+                <li><span class="time">11:30~12:00</span> Linux Command</li>
+                <li><span class="time">13:30~14:30</span> Insecure design (Leak)</li>
+                <li><span class="time">14:30~15:30</span> Injection (SQL、Command..)</li>
+                <li><span class="time">15:30~16:30</span> Path Traversal、LFI</li>
+            </ul>
+
+            <!-- Day 2 -->
+            <h3 class="day-title">🔵 Day 2 – 講師：毛哥EM</h3>
+            <ul class="course-list">
+                <li><span class="time">10:00~11:00</span> HTML</li>
+                <li><span class="time">11:00~12:00</span> 基礎 CSS</li>
+                <li><span class="time">13:00~14:00</span> 基礎平面設計</li>
+                <li><span class="time">14:00~15:00</span> Git & GitHub</li>
+                <li><span class="time">15:00~16:00</span> 進階 CSS</li>
             </ul>
         </div>
 
@@ -89,7 +144,6 @@
             <ul>
                 <li>請閱讀網站資訊與填寫家長同意書，送出表單即同意營隊須知。</li>
                 <li>信箱為報名通訊管道，後續通知皆以此為主。</li>
-                <li>營隊網站：<a href="#">點此前往</a></li>
             </ul>
         </div>
 
@@ -116,10 +170,12 @@
                 <ul>
                     <li><a href="#info">活動資訊</a></li>
                     <li><a href="#teacher">講師介紹</a></li>
+                    <li><a href="#schedule">活動流程</a></li>
+                    <li><a href="#course-schedule">課程資訊</a></li>
                     <li><a href="#organizer">主辦單位</a></li>
                     <li><a href="#rules">注意事項</a></li>
                     <li><a href="#contact">聯絡方式</a></li>
-                    <li><a href="#schedule">活動流程</a></li>
+                    
                 </ul>
             </div>
 

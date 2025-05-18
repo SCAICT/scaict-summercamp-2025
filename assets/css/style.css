@@ -1,3 +1,6 @@
+/* ───────────────────────────────
+🌐 全域樣式設定
+─────────────────────────────── */
 body {
   font-family: 'Noto Sans TC', sans-serif;
   margin: 0;
@@ -6,31 +9,17 @@ body {
   line-height: 1.6;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(8px);
-  z-index: 100;
-}
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-}
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-}
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.1);
+ul {
+  padding-left: 1rem;
 }
 
+a {
+  color: #ff8c00;
+  text-decoration: underline;
+}
+/* ───────────────────────────────
+🚀 Hero 首頁主視覺
+─────────────────────────────── */
 .hero {
   height: 100vh;
   background: linear-gradient(to bottom right, #1a1a3f, #290047);
@@ -41,13 +30,17 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .hero h1 {
   font-size: 3rem;
 }
+
 .flipdown {
   margin-top: 2rem;
 }
-
+/* ───────────────────────────────
+📦 區塊排版 Section
+─────────────────────────────── */
 .section {
   padding: 4rem 2rem;
   display: flex;
@@ -56,7 +49,9 @@ body {
   max-width: 960px;
   margin: auto;
 }
-
+/* ───────────────────────────────
+🧊 卡片：玻璃模糊樣式
+─────────────────────────────── */
 .card-glass {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -67,25 +62,17 @@ body {
   color: #fff;
   transition: 0.3s ease;
 }
+
 .card-glass h2 {
   color: #ff8c00;
 }
+
 .card-glass:hover {
   box-shadow: 0 0 40px rgba(128, 0, 255, 0.3);
 }
-ul {
-  padding-left: 1rem;
-}
-a {
-  color: #ff8c00;
-  text-decoration: underline;
-}
-footer {
-  text-align: center;
-  padding: 2rem;
-  background: #1a1a2f;
-}
-
+/* ───────────────────────────────
+🌌 星空背景 (Canvas)
+─────────────────────────────── */
 #starfield {
   position: fixed;
   top: 0;
@@ -95,7 +82,14 @@ footer {
   z-index: -1;
   background: radial-gradient(ellipse at center, #1b1b2f 0%, #000 100%);
 }
-
+/* ───────────────────────────────
+🦶 頁腳 Footer 區塊
+─────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #1a1a2f;
+}
 
 .site-footer {
   background: #1a1a2f;
@@ -103,6 +97,7 @@ footer {
   color: #ccc;
   font-size: 0.95rem;
 }
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -111,37 +106,47 @@ footer {
   max-width: 1100px;
   margin: auto;
 }
-.footer-brand, .footer-links, .footer-social {
+
+.footer-brand,
+.footer-links,
+.footer-social {
   flex: 1 1 300px;
 }
+
 .footer-brand h3 {
   color: #ff8c00;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
 .footer-links h4,
 .footer-social h4 {
   color: #ff8c00;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
+
 .footer-links ul {
   list-style: none;
   padding: 0;
 }
+
 .footer-links ul li {
   margin: 0.4rem 0;
 }
+
 .footer-links ul li a,
 .footer-social a {
   color: #fff;
   text-decoration: none;
 }
+
 .footer-links ul li a:hover,
 .footer-social a:hover {
   color: #ff8c00;
   text-decoration: underline;
 }
+
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
@@ -150,22 +155,28 @@ footer {
   font-size: 0.85rem;
   color: #888;
 }
-
+/* ───────────────────────────────
+🎓 講師介紹 Mentor 區塊
+─────────────────────────────── */
 .mentor-flex {
   display: flex;
   justify-content: center;
-  gap: 15rem;
+  column-gap: 15rem;
+  row-gap: 2rem;
   flex-wrap: wrap;
   margin-top: 1rem;
 }
+
 .mentor-item {
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
 }
+
 .mentor-item:hover {
   transform: scale(1.05);
 }
+
 .mentor-item img {
   width: 100px;
   height: 100px;
@@ -174,15 +185,19 @@ footer {
   border: 2px solid #ff8c00;
   margin-bottom: 0.5rem;
 }
+
 .mentor-item h3 {
   margin: 0;
   color: #fff;
 }
-
+/* ───────────────────────────────
+📑 講師詳細介紹 Modal 彈窗
+─────────────────────────────── */
 .modal {
   display: none;
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   backdrop-filter: blur(5px);
@@ -191,6 +206,7 @@ footer {
   align-items: center;
   z-index: 9999;
 }
+
 .modal-content {
   background: #1a1a2f;
   color: white;
@@ -200,6 +216,7 @@ footer {
   width: 90%;
   position: relative;
 }
+
 .close {
   position: absolute;
   top: 1rem;
@@ -209,7 +226,31 @@ footer {
   cursor: pointer;
 }
 
+.modal-avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #ff8c00;
+  box-shadow: 0 0 12px rgba(255, 140, 0, 0.4);
+}
 
+.mentor-link a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ff8c00;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.mentor-link a:hover {
+  color: #ffa64d;
+}
+/* ───────────────────────────────
+🚨 CTA「立即報名」按鈕
+─────────────────────────────── */
 .cta-glow-button {
   display: inline-block;
   margin-top: 2rem;
@@ -221,20 +262,223 @@ footer {
   color: #fff;
   border: 2px solid transparent;
   border-radius: 12px;
-  background: 
+  background:
     linear-gradient(#0f0c29, #0f0c29) padding-box,
     linear-gradient(135deg, #ff8c00, #a100ff) border-box;
-  box-shadow: 0 0 12px rgba(255, 140, 0, 0.4),
-              0 0 24px rgba(128, 0, 255, 0.3);
+  box-shadow:
+    0 0 12px rgba(255, 140, 0, 0.4),
+    0 0 24px rgba(128, 0, 255, 0.3);
   transition: all 0.3s ease;
 }
 
 .cta-glow-button:hover {
-  box-shadow: 0 0 20px #ff8c00,
-              0 0 40px #a100ff,
-              0 0 60px rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 20px #ff8c00,
+    0 0 40px #a100ff,
+    0 0 60px rgba(255, 255, 255, 0.2);
   transform: translateY(-3px) scale(1.03);
-  background: 
+  background:
     linear-gradient(#0f0c29, #0f0c29) padding-box,
     linear-gradient(135deg, #a100ff, #ff8c00) border-box;
 }
+/* ───────────────────────────────
+🕓 活動流程時間軸（含日切換 Tab）
+─────────────────────────────── */
+.neon-schedule .day-tabs {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.neon-schedule .tab {
+  padding: 0.4rem 1.4rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: #222;
+  border: 1px solid #3d3d70;
+  color: #bbb;
+  transition: .25s;
+}
+
+.neon-schedule .tab.active {
+  background: linear-gradient(135deg, #ff8c00, #7f00ff);
+  color: #fff;
+  box-shadow: 0 0 12px #a855ff80;
+}
+
+.timeline-wrapper {
+  display: none;
+}
+
+.timeline-wrapper.show {
+  display: block;
+}
+
+.timeline {
+  position: relative;
+  list-style: none;
+  padding: 0 1.5rem 0 2.6rem;
+  margin: 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(#7f00ff, #ff8c00);
+  filter: drop-shadow(0 0 6px #ff8c0050);
+}
+
+.timeline li {
+  position: relative;
+  margin: 0 0 1.2rem;
+  animation: slideUp .5s ease both;
+}
+
+.timeline li:nth-child(even) {
+  animation-delay: .07s;
+}
+.timeline li:nth-child(odd) {
+  animation-delay: .04s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hex {
+  position: absolute;
+  left: -2.8rem;
+  top: 0.2px;
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(135deg, #ff8c00, #7f00ff);
+  clip-path: polygon(50% 0, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  filter: drop-shadow(0 0 4px #ff8c0060);
+}
+
+.content {
+  display: inline-block;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  background: #23263b;
+  border-radius: 8px;
+  color: #d9d9ff;
+  font-family: inherit;
+  font-size: .95rem;
+}
+/* ───────────────────────────────
+📚 課程表 Course List
+─────────────────────────────── */
+.day-title {
+  margin-top: 1.5rem;
+  color: #ffa64d;
+  font-weight: bold;
+}
+
+.course-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.course-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 4px solid #ff8c00;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.course-list li:hover {
+  background: rgba(255, 140, 0, 0.08);
+  border-color: #a100ff;
+}
+
+.course-list .time {
+  color: #ff8c00;
+  font-weight: 600;
+  width: 130px;
+  flex-shrink: 0;
+}
+/* ───────────────────────────────
+📱 響應式排版（600px 以下）
+─────────────────────────────── */
+@media (max-width: 600px) {
+  /* Hero 區塊字縮小 */
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .flipdown {
+    transform: scale(0.8);
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.9rem 1.6rem;
+  }
+
+  /* 課表上下排 */
+  .course-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-list .time {
+    width: auto;
+  }
+
+  /* 時間軸調整 */
+  .timeline {
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    left: 0.1rem;
+  }
+
+  .hex {
+    left: -2.2rem;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline li {
+    margin-bottom: 1rem;
+  }
+
+  .timeline li .content {
+    font-size: 0.95rem;
+    padding: 0.7rem 0.9rem;
+  }
+
+  /* Footer 導覽隱藏 */
+  .footer-links {
+    display: none;
+  }
+}
+
+
+/* 沒錯，AI幫我整理過了，下一屆可以放心看這份了 */
