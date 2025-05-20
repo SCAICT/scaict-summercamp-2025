@@ -87,7 +87,11 @@ const mentorData = [
   {
     name: "chao28661",
     img: "assets/images/chao.png",
-    detail: `講師資訊`,
+    detail: `NCHU  @CS<br>
+             OhYeahSeC  @Leader<br>
+             SCAICT  @Leader and Information Team<br>
+             AIS3 Junior  @TA<br>
+             AIS3 Club  @Speaker`,
     link: ""
   },
   {
