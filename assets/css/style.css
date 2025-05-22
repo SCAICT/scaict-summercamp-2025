@@ -361,7 +361,7 @@ footer {
 .hex {
   position: absolute;
   left: -2.8rem;
-  top: 0.2px;
+  top: 18px;
   width: 16px;
   height: 16px;
   background: linear-gradient(135deg, #ff8c00, #7f00ff);
@@ -479,6 +479,7 @@ footer {
     display: none;
   }
 }
+
 
 
 /* 沒錯，AI幫我整理過了，下一屆可以放心看這份了 */

@@ -138,3 +138,6 @@ document.querySelectorAll('.neon-schedule .tab').forEach(tab => {
       .forEach(w => w.classList.toggle('show', w.id === day));
   });
 });
+
+
+/* 沒錯，AI幫我整理過了，下一屆可以放心看這份了 */ 
