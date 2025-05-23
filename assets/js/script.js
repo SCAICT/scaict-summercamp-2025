@@ -77,7 +77,8 @@ draw();
 document.addEventListener("DOMContentLoaded", () => {
   const endTime = new Date("2025-07-04T23:59:59").getTime() / 1000;
   new FlipDown(endTime, 'flipdown', {
-    headings: ["天", "時", "分", "秒"]
+    headings: ["天", "時", "分", "秒"],
+    theme: 'light'
   }).start();
 });
 /* ───────────────────────────────
